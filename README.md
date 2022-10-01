@@ -10,7 +10,8 @@ m.AddProvider(new GutenbergProvider());
 m.AddProvider(new MekOszkProvider());
 m.AddProvider(new NcoreProvider("USER", "PASS"));
 m.AddProvider(new ZLibaryProvider());
-List<Book> books = m.DoSearch(new List<Filters.Languages> { Filters.Languages.Hungarian }, new List<Filters.Topics> { Filters.Topics.None }, title: "math");
+List<Book> books = m.DoSearch(new List<Filters.Languages> { Filters.Languages.Hungarian }, 
+  new List<Filters.Topics> { Filters.Topics.None }, title: "math");
 string downloadURL=m.DownloadBook(books[0])
 ```
 ## Status
